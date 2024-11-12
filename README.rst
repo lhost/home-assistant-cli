@@ -101,6 +101,10 @@ autocompletion for ``hass-cli`` commands.
 Usage
 =======
 
+
+Basic info
+----------
+
 Note: Below is listed **some** of the features, make sure to use ``--help`` and
 autocompletion to learn more of the features as they become available.
 
@@ -122,6 +126,19 @@ If you prefer yaml you can use ``--output=yaml``:
       location_name: Wayne Manor
       requires_api_password: false
       version: 0.86.2
+
+Backup
+------
+
+Backup can be created with command:
+
+.. code:: bash
+
+    $ hass-cli service list | grep backup
+    $ hass-cli service call backup.create
+
+States
+------
 
 To get list of states you use `state list`:
 
@@ -196,6 +213,9 @@ You can also explicitly create/edit via the ``--json`` flag:
 List possible services with or without a regular expression filter:
 
 .. code:: bash
+
+Services
+--------
 
     $ hass-cli service list 'home.*toggle'
       DOMAIN         SERVICE    DESCRIPTION
